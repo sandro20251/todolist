@@ -4,12 +4,12 @@ import TaskForm from "../components/TaskForm";
 
 const Tasks = () => {
 
-    const { tasks, createNewTask } = useTasks();
+    const { tasks, createNewTask, deleteExistingTask, updateExistingTask, buscar } = useTasks();
 
     return (
         <div>
             <TaskForm createNewTask={createNewTask}/>
-            <TaskList tasks={tasks} />
+            <TaskList tasks={tasks} deleteExistingTask={deleteExistingTask} updateExistingTask={updateExistingTask}  />
 
         </div>
 

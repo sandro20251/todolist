@@ -1,27 +1,44 @@
 import { useState, useEffect } from "react";
-import { getTasks, createTask } from "../services/taskService";
+import { getTasks, createTask, deleteTask, updateTask, buscarTarefa } from "../services/taskService";
 
 const useTasks = () => {
     const [tasks, setTasks] = useState([]);
 
     useEffect(() => {
-        const todasTarefas = async()=>{
+        const todasTarefas = async () => {
             const tarefas = await getTasks();
             setTasks(tarefas)
         }
         todasTarefas();
     }, [])
 
-   
 
-    const createNewTask = async(title)=>{
-        const novaTarefa = await createTask(title)
+
+    const createNewTask = async (title) => {
+        await createTask(title)
         const tarefas = await getTasks();
         setTasks(tarefas)
     }
 
-     return {
-        tasks, createNewTask
+    
+
+    const deleteExistingTask = async (id) => {
+        await deleteTask(id);
+        const tarefas = await getTasks();
+        setTasks(tarefas);
+    }
+
+    const updateExistingTask = async(id, task)=>{
+        await updateTask(id, task);
+        const tarefas = await getTasks();
+        setTasks(tarefas);
+    }
+
+   
+   
+
+    return {
+        tasks, createNewTask, deleteExistingTask, updateExistingTask
     }
 }
 
