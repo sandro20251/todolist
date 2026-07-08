@@ -1,0 +1,18 @@
+.tarefaCompleta {
+    background: #d4edda;
+    color: #155724;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+
+    text-decoration: line-through;
+    opacity: .7;
+}
+
+.tarefaIncompleta {
+    background-color: white;
+    color: black;
+    width: 40%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
