@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './TaskForm.css'
 
 const TaskForm = ({createNewTask}) => {
     const [title, setTitle] = useState("");
@@ -10,8 +11,8 @@ const TaskForm = ({createNewTask}) => {
     }
 
     return (
-        <div>
-            <h1>Cadastre sua nova tarefa:</h1>
+        <div className={'formularioContainer'}>
+            <h2>Cadastre sua nova tarefa:</h2>
             <form onSubmit={handleNovaTarefa}>
                 <input type="text" name="title" placeholder="Digite sua nova tarefa" onChange={(e) => setTitle(e.target.value)} value={title} />
                 <button type="submit">Cadastrar</button>

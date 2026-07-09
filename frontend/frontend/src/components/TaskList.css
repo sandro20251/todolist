@@ -1,18 +1,145 @@
 .tarefaCompleta {
-    background: #d4edda;
-    color: #155724;
+    background: #2563EB;
+    color: white;
     width: 40%;
     margin: 0 auto;
     border-radius: 10px;
-
+    border: 1px solid #2563EB;
     text-decoration: line-through;
-    opacity: .7;
+    border: 1px solid #2563EB;
+    padding: 10px;
+    margin-bottom: 5px;
+
 }
 
 .tarefaIncompleta {
-    background-color: white;
-    color: black;
+    background-color: aliceblue;
+    color: #2563EB;
     width: 40%;
     margin: 0 auto;
     border-radius: 10px;
+    border: 1px solid #2563EB;
+    padding: 10px;
+    margin-bottom: 5px;
 }
+
+.listContainer {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.tituloList {
+    background-color: #2563EB;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.estatisticasContainer {
+    background-color: aliceblue;
+    color: #2563EB;
+    border-radius: 10px;
+    padding: 10PX;
+}
+
+.tipoEstatistica {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.pesquisa {
+
+
+    gap: 10px;
+    background-color: #2563EB;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.pesquisa input {
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2563EB;
+    margin-bottom: 10px;
+}
+
+.pesquisa h2 {
+    margin-bottom: 10px;
+}
+
+.botoesContainer {
+    width: 80;
+    margin: 0 auto;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+
+
+}
+
+.botoesContainer button {
+    width: 25%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+    opacity: 1;
+
+}
+
+.botoesContainer button:hover {
+    opacity: .7;
+}
+
+.botao2 {
+    width: 25%;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+    
+
+}
+
+.botao2:hover{
+    background-color: white;
+    color: #2563EB;
+}
+
+.descricaoTarefa{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.editarTarefa{
+    display: flex;
+    flex-direction: column;
+}
+
+.editarTarefa input{
+    border: 1px solid #2563EB;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
