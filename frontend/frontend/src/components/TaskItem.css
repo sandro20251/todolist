@@ -1,17 +1,3 @@
-.tarefaCompleta {
-    background: #2563EB;
-    color: white;
-    width: 40%;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid #2563EB;
-    text-decoration: line-through;
-    border: 1px solid #2563EB;
-    padding: 10px;
-    margin-bottom: 5px;
-
-}
-
 .tarefaIncompleta {
     background-color: aliceblue;
     color: #2563EB;

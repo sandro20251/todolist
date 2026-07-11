@@ -1,0 +1,15 @@
+.estatisticasContainer {
+    border: 1px solid #2563EB;
+    width: 30%;
+    background-color: aliceblue;
+    color: #2563EB;
+    border-radius: 10px;
+    padding: 10PX;
+}
+
+.tipoEstatistica {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    padding: 10px;
+}

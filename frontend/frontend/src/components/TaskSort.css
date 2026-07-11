@@ -1,0 +1,17 @@
+.sortContainer{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    border-radius: 10px;
+}
+
+.sortContainer select{
+        width: 100px;
+        height: 25px;
+        border-radius: 10px;
+        text-align: center;
+        border: 1px solid #2563EB;
+}
