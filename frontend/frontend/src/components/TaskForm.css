@@ -1,35 +1,39 @@
-.formularioContainer{
+.formularioContainer {
     background-color: aliceblue;
     border-radius: 10px;
     width: 80%;
-    margin:  0 auto;
+    margin: 0 auto;
     padding: 10px;
     color: #2563EB;
 }
 
-.formularioContainer h2{
+.formularioContainer h2 {
     margin: 10px;
 }
 
-.formularioContainer form{
+.formularioContainer form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
 }
 
-.formularioContainer input{
-    width: 40%;
+.formularioContainer input {
+    width: 200px;
+    min-width: 180px;
+    max-width: 250px;
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #2563EB;
     border-radius: 10px;
     text-align: center;
-   
+
 }
 
-.formularioContainer button{
-    width: 25%;
+.formularioContainer button {
+    width: 180px;
+    max-width: 200px;
+    min-width: 160px;
     margin: 0 auto;
     padding: 10px;
     background-color: #2563EB;
@@ -40,9 +44,19 @@
     cursor: pointer;
     transition: .5s;
     opacity: 1;
-   
+
 }
 
-.formularioContainer button:hover{
+.formularioContainer button:hover {
     opacity: .7;
+}
+
+@media (max-width:375px) {
+    .formularioContainer h2{
+        font-size: 18px;
+    }
+
+    .formularioContainer{
+        padding: 8px;
+    }
 }

@@ -1,17 +1,28 @@
-.sortContainer{
+.sortContainer {
+
     display: flex;
     gap: 10px;
     justify-content: center;
     padding: 10px;
-    background-color: #2563EB;
-    color: white;
+    background-color: aliceblue;
+    color: #2563EB;
     border-radius: 10px;
 }
 
-.sortContainer select{
-        width: 100px;
-        height: 25px;
-        border-radius: 10px;
-        text-align: center;
-        border: 1px solid #2563EB;
+.sortContainer select {
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #2563EB;
 }
+
+
+
+@media(min-width:768px) {
+    .sortContainer {
+        justify-content: flex-end;
+        padding: 15px;
+    }
+}
+

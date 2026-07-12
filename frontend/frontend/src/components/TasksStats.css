@@ -1,7 +1,9 @@
 .estatisticasContainer {
     border: 1px solid #2563EB;
-    width: 30%;
-    background-color: aliceblue;
+    width: 100%;
+
+    min-width: 200px;
+    background-color: rgb(245, 245, 214);
     color: #2563EB;
     border-radius: 10px;
     padding: 10PX;
@@ -12,4 +14,11 @@
     gap: 10px;
     justify-content: space-around;
     padding: 10px;
+}
+
+@media(max-width: 375px) {
+    .tipoEstatistica {
+        display: flex;
+        flex-direction: column;
+    }
 }

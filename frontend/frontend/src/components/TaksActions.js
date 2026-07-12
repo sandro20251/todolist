@@ -1,15 +1,16 @@
+import './TaskActions.css'
+
 const TaskActions = ({ handleLimparConcluidas, tasks, handleMarcarTodas }) => {
     return (
-        <div>
+        <div className={'actionsContainer'}>
             <label>
-                Marcar todas tarefas:
-
                 <input type="checkbox"
-                    
+
                     onChange={() => handleMarcarTodas(tasks)} />
+                Marcar todas tarefas
             </label>
 
-            <button onClick={() => handleLimparConcluidas(tasks)}>Limpar concuidas</button>
+            <button onClick={() => handleLimparConcluidas(tasks)} className={'botao3'}>Limpar concuidas</button>
         </div>
     )
 }

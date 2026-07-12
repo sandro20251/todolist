@@ -76,3 +76,28 @@
     
 }
 
+.sortActions{
+    display:flex
+}
+
+@media (max-width:1024px){
+    .estatisticasPesquisa{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:768px){
+    .tituloFiltro{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:425px){
+    .sortActions{
+        display: flex;
+        flex-direction: column;
+    }
+}
+

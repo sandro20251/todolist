@@ -149,7 +149,7 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
         <div className={'listContainer'}>
 
 
-            <div className={'estatisticasPesquisa'}>
+            <div>
                 <TasksStats tasks={tasks} />
                 <TaskSearch pesquisa={pesquisa} setPesquisa={setPesquisa} />
             </div>
@@ -157,8 +157,11 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
                 <h2 className={'tituloList'}>Minhas tarefas:</h2>
                 <TaskFilter handleMudarFiltro={handleMudarFiltro} filtro={filtro} />
             </div>
-            <TaskActions handleLimparConcluidas={handleLimparConcluidas} tasks={tasks} handleMarcarTodas={handleMarcarTodas} />
-            <TaskSort criterio={criterio} setCriterio={setCriterio} ordem={ordem} setOrdem={setOrdem} />
+            <div className={'sortActions'}>
+                <TaskActions handleLimparConcluidas={handleLimparConcluidas} tasks={tasks} handleMarcarTodas={handleMarcarTodas} />
+                <TaskSort criterio={criterio} setCriterio={setCriterio} ordem={ordem} setOrdem={setOrdem} />
+            </div>
+
 
             <div>
                 {tarefasFiltradas.length === 0 &&

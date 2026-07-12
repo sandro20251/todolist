@@ -1,6 +1,6 @@
 .pesquisa {
     border: 1px solid #2563EB;
-    width: 70%;
+    width: 100%;
     gap: 10px;
     background-color: aliceblue;
     color: #2563EB;
@@ -10,7 +10,9 @@
 }
 
 .pesquisa input {
-    width: 40%;
+    width: 200px;
+    min-width: 180px;
+    max-width: 220px;
     padding: 10px;
     border-radius: 10px;
     text-align: center;
@@ -20,4 +22,11 @@
 
 .pesquisa h2 {
     margin-bottom: 10px;
+}
+
+@media(min-width:768px){
+    .pesquisa input {
+        width: 70%;
+        max-width: 500px;
+    }
 }
