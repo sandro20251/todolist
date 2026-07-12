@@ -1,27 +1,4 @@
-.tarefaCompleta {
-    background: #2563EB;
-    color: white;
-    width: 40%;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid #2563EB;
-    text-decoration: line-through;
-    border: 1px solid #2563EB;
-    padding: 10px;
-    margin-bottom: 5px;
 
-}
-
-.tarefaIncompleta {
-    background-color: aliceblue;
-    color: #2563EB;
-    width: 40%;
-    margin: 0 auto;
-    border-radius: 10px;
-    border: 1px solid #2563EB;
-    padding: 10px;
-    margin-bottom: 5px;
-}
 
 .listContainer {
     width: 80%;
@@ -89,5 +66,13 @@
     border-radius: 10px;
     text-align: center;
     margin-bottom: 10px;
+}
+.tarefas{
+    border: 1px solid blue;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 

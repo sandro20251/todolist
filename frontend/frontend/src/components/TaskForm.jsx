@@ -1,13 +1,15 @@
 import { useState } from "react";
 import './TaskForm.css'
 
-const TaskForm = ({createNewTask}) => {
+const TaskForm = ({createNewTask, messages, setMessages}) => {
     const [title, setTitle] = useState("");
+    
 
     const handleNovaTarefa = async(e) => {
         e.preventDefault();
         await createNewTask(title)
         setTitle("")
+        setMessages("Tarefa criada com sucesso!")
     }
 
     return (

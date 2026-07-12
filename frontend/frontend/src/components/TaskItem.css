@@ -1,12 +1,27 @@
 .tarefaIncompleta {
     background-color: aliceblue;
     color: #2563EB;
-    width: 40%;
+    width: 250px;
     margin: 0 auto;
     border-radius: 10px;
     border: 1px solid #2563EB;
     padding: 10px;
     margin-bottom: 5px;
+}
+
+.tarefaCompleta {
+    background: rgb(245, 245, 214);
+    ;
+    color: blue;
+    width: 250px;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1px solid #2563EB;
+    text-decoration: line-through;
+    border: 1px solid #2563EB;
+    padding: 10px;
+    margin-bottom: 5px;
+
 }
 
 .listContainer {
@@ -24,11 +39,65 @@
 
 
 
-.estatisticasPesquisa{
+.estatisticasPesquisa {
     display: flex;
     flex-direction: row;
 }
 
+
+.botao2 {
+    width: 100px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+
+
+}
+
+.tituloFiltro {
+    background-color: #2563EB;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao2:hover {
+    background-color: white;
+    color: #2563EB;
+}
+
+.descricaoTarefa {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.editarTarefa {
+    display: flex;
+    flex-direction: column;
+}
+
+.editarTarefa input {
+    border: 1px solid #2563EB;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.tarefa {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
 
 .botao2 {
     width: 25%;
@@ -41,39 +110,11 @@
     text-align: center;
     cursor: pointer;
     transition: .5s;
-    
+
 
 }
 
-.tituloFiltro{
-    background-color: #2563EB;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.botao2:hover{
+.botao2:hover {
     background-color: white;
     color: #2563EB;
 }
-
-.descricaoTarefa{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px;
-}
-
-.editarTarefa{
-    display: flex;
-    flex-direction: column;
-}
-
-.editarTarefa input{
-    border: 1px solid #2563EB;
-    padding: 10px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 10px;
-}
-

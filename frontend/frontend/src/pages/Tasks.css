@@ -7,3 +7,14 @@
     margin: 0 auto;
 }
 
+.mensagens{
+    width: 80%;
+    margin: 0 auto;
+    background-color: rgb(245, 245, 214);
+    border: 1px solid blue;
+    border-radius: 10px;
+    color: blue;
+    padding: 10px;
+    font-weight: bold;
+}
+
