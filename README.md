@@ -54,23 +54,21 @@ Banco de dados:
 
 📂 Estrutura do projeto
 
-todo-list/
-│
-├── backend/
-│ └── src/
-│ ├── controllers/
-│ ├── database/
-│ ├── middlewares/
-│ ├── models/
-│ ├── routes/
-│ └── server.js
-│
-└── frontend/
-└── src/
-├── components/
-├── hooks/
-├── pages/
-└── services/
+todo-list
+- backend
+   - src
+      - controllers
+      - database
+      - middlewares
+      - models
+      - routes
+      - server.js
+- frontend
+   - SRC
+     - components
+     - hooks
+     - pages
+     - services
           
 🚀 Como executar
 
