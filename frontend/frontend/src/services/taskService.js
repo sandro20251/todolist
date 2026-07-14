@@ -1,5 +1,5 @@
 
-const url = "http://localhost:5000/tasks";
+const url = `${process.env.REACT_APP_API_URL}/tasks`;
 
 const getTasks = async () => {
     const tarefas = await fetch(url);
