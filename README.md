@@ -19,6 +19,32 @@ backend: Node.js banco de dados em MySQL com a ORM sequelize,
 frontend: React.js
 
 📸 Capturas de tela
+### Home
+![Tela de Login](./README/images/Home.png)
+
+### Criar tarefa
+![Tela de Login](./README/images/Criar-tarefa.png)
+
+### Editando tarefa
+![Tela de Login](./README/images/Editando-tarefa.png)
+
+### Excluir tarefa
+![Tela de Login](./README/images/Excluir-tarefa.png)
+
+### Filtrar tarefa
+![Tela de Login](./README/images/Filtrar-tarefa.png)
+
+### Pesquisar tarefa
+![Tela de Login](./README/images/Pesquisar-tarefa.png)
+
+### Estado vazio
+![Tela de Login](./README/images/Estado-vazio.png)
+
+### Responsividade
+![Tela de Login](./README/images/Responsividade2.png)
+![Tela de Login](./README/images/responsividade celular.png)
+
+
 
 📂 Estrutura do projeto
 
