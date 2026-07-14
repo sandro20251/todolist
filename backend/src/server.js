@@ -46,13 +46,22 @@ const db = require('./database/index');
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+app.use(cors({
+    origin: [
+        'http://localhost:3000',
+        'https://todolist-two-gold-54.vercel.app'
+    ],
+    credentials: true
+}));
 
 app.get('/', (req, res) => {
     res.json({
         status: "API funcionando"
     });
 });
+
+app.use('/', require('./routes/taskRoutes'));
 
 db.authenticate()
     .then(() => {
