@@ -7,6 +7,13 @@ const app = express();
 // middlewares
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.json({
+        status: "API funcionando",
+        ambiente: "Vercel"
+    });
+});
+
 app.use(cors({
     origin: [
         'http://localhost:3000',
