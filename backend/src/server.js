@@ -20,12 +20,12 @@ app.use('/', require('./routes/taskRoutes'));
 
 
 // sincronizar banco
-db.sync()
+db.authenticate()
     .then(() => {
         console.log("Banco conectado");
     })
     .catch((err) => {
-        console.log("Erro no banco", err.message);
+        console.log("Erro banco:", err.message);
     });
 
 
