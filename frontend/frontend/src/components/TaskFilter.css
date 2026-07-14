@@ -1,33 +1,4 @@
-/* .botoesContainer {
-    width: 80;
-    margin: 0 auto;
-    background-color: aliceblue;
-    padding: 10px;
-    border-radius: 10px;
-
-
-}
-
 .botoesContainer button {
-    width: 25%;
-    margin: 0 auto;
-    padding: 10px;
-    background-color: #2563EB;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    text-align: center;
-    cursor: pointer;
-    transition: .5s;
-    opacity: 1;
-
-}
-
-.botoesContainer button:hover {
-    opacity: .7;
-} */
-
-.botoesContainer button{
     height: 50px;
     border: none;
     background-color: #2563EB;
@@ -38,17 +9,17 @@
     opacity: 1;
 }
 
-.botoesContainer button:hover{
+.botoesContainer button:hover {
     opacity: .7;
     border-bottom: 1px solid white;
 }
 
-@media(max-width: 425px){
-    .botoesContainer button{
+@media(max-width: 425px) {
+    .botoesContainer button {
         display: flex;
         flex-direction: column;
         margin: 10px auto;
         height: 25px;
-        
+
     }
 }

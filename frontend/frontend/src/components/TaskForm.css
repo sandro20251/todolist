@@ -1,5 +1,7 @@
 .formularioContainer {
+    
     background-color: aliceblue;
+    border: 1px solid #2563EB;
     border-radius: 10px;
     width: 80%;
     margin: 0 auto;

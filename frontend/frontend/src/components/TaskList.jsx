@@ -16,12 +16,22 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
     const [pesquisa, setPesquisa] = useState("");
     const [ordem, setOrdem] = useState("crescente");
     const [criterio, setCriterio] = useState("titulo");
-    const [marcarTodas, setMarcarTodas] = useState(true);
+    const [marcarTodas, setMarcarTodas] = useState(false);
+    const [loading, setLoading] = useState(false);
 
 
     const [excluirId, setExcluirId] = useState(null)
 
+    const mostrarMensagens = (texto) => {
+
+        setMessages(texto)
+        setTimeout(() => {
+            setMessages(null)
+        }, 5000)
+    }
+
     const iniciarEdicao = (id, titulo) => {
+
         setEditingId(id);
         setTitulo(titulo);
     };
@@ -33,40 +43,68 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
 
     const salvarEdicao = async (task) => {
 
+        const t2 = titulo.trim();
+
+        if (t2 === "") {
+            mostrarMensagens("Digite algo, não é possível salvar  uma tarefa vazia");
+            return;
+
+        }
+
         const updateTask = {
-            title: titulo,
+            title: t2,
             completed: task.completed
         };
 
-        await updateExistingTask(task.id, updateTask);
+        setLoading(true)
 
-        setTitulo("");
-        setEditingId(null);
+        try {
+            await updateExistingTask(task.id, updateTask);
+            setTitulo("");
+            setEditingId(null);
+            mostrarMensagens("Tarefa alterada com sucesso!");
+        } catch (err) {
+            mostrarMensagens('Algo deu errado')
+        } finally {
+            setLoading(false)
+        }
+
     };
 
     const alterarStatus = async (task) => {
+        setLoading(true)
         const objeto = {
             title: task.title,
             completed: !task.completed
         }
+        try {
+            await updateExistingTask(task.id, objeto);
 
-        await updateExistingTask(task.id, objeto);
-        setMessages(
-            task.completed
-                ? "Tarefa marcada como pendente."
-                : "Tarefa concluída."
-        );
+            if (task.completed) {
+                mostrarMensagens("Tarefa marcada como pendente.")
+
+            } else {
+                mostrarMensagens("Tarefa concluída.")
+
+            }
+        } catch (err) {
+            mostrarMensagens('Algo deu errado')
+        } finally {
+            setLoading(false)
+        }
 
     }
 
     const handleMudarFiltro = (tipo) => {
+
         setFiltro(tipo)
     }
 
     let tarefasFiltradas = [...tasks];
+
+
     if (filtro === "todas") {
         tarefasFiltradas = tasks.filter((task) => task.title.toLowerCase().includes(pesquisa.toLowerCase()))
-
     }
 
     if (filtro === "completas") {
@@ -109,42 +147,73 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
     }
 
     const handleExcluir = async (id) => {
-        await deleteExistingTask(id);
-        setExcluirId(null);
-        setMessages("Tarefa excluida com sucesso")
+        setLoading(true)
+        try {
+            await deleteExistingTask(id);
+            setExcluirId(null);
+            mostrarMensagens("Tarefa excluída com sucesso")
+        } catch (err) {
+            mostrarMensagens('Algo deu errado')
+        } finally {
+            setLoading(false)
+        }
+
     }
 
     const handleLimparConcluidas = async (tasks) => {
-        for (let i = 0; i < tasks.length; i++) {
-            if (tasks[i].completed) {
-                await deleteExistingTask(tasks[i].id);
+        setLoading(true)
+        try {
+            for (let i = 0; i < tasks.length; i++) {
+                if (tasks[i].completed) {
+                    await deleteExistingTask(tasks[i].id);
+                }
             }
-
+            mostrarMensagens("Todas tarefas concluidas removidas")
+        } catch (err) {
+            mostrarMensagens('Algo deu errado')
+        } finally {
+            setLoading(false)
         }
-        setMessages("Tarefas concluidas removidas")
     }
 
     const handleMarcarTodas = async (tasks) => {
         const novoStatus = !marcarTodas;
-        setMarcarTodas(novoStatus);
+        setMarcarTodas(novoStatus)
+        setLoading(true)
+        try {
 
-        for (let i = 0; i < tasks.length; i++) {
-            const objeto = {
-                title: tasks[i].title,
-                completed: marcarTodas
+
+            for (let i = 0; i < tasks.length; i++) {
+                const objeto = {
+                    title: tasks[i].title,
+                    completed: novoStatus
+                }
+                await updateExistingTask(tasks[i].id, objeto)
+
             }
-            await updateExistingTask(tasks[i].id, objeto)
-
+            if (novoStatus) {
+                mostrarMensagens("Todas as tarefas foram concluídas");
+            } else {
+                mostrarMensagens("Todas as tarefas estão pendentes");
+            }
+        } catch (err) {
+            mostrarMensagens("Algo deu errado")
+        } finally {
+            setLoading(false)
         }
-        if (marcarTodas === true) {
-            setMessages("Todas as tarefas foram concluídas")
-        } else (
-            setMessages("Todas as tarefas estão pendentes")
-        )
 
 
     }
-
+    let mensagem = "";
+    if (tasks.length === 0) {
+        mensagem = "Você ainda não possui nenhuma tarefa.";
+    } else if (pesquisa !== "") {
+        mensagem = "Nenhuma tarefa encontrada para essa pesquisa.";
+    } else if (filtro === "completas") {
+        mensagem = "Não existem tarefas concluídas.";
+    } else if (filtro === "incompletas") {
+        mensagem = "Não existem tarefas pendentes.";
+    }
     return (
         <div className={'listContainer'}>
 
@@ -158,31 +227,31 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
                 <TaskFilter handleMudarFiltro={handleMudarFiltro} filtro={filtro} />
             </div>
             <div className={'sortActions'}>
-                <TaskActions handleLimparConcluidas={handleLimparConcluidas} tasks={tasks} handleMarcarTodas={handleMarcarTodas} />
+                <TaskActions handleLimparConcluidas={handleLimparConcluidas} tasks={tasks} handleMarcarTodas={handleMarcarTodas} loading={loading} />
                 <TaskSort criterio={criterio} setCriterio={setCriterio} ordem={ordem} setOrdem={setOrdem} />
             </div>
 
 
-            <div>
-                {tarefasFiltradas.length === 0 &&
-                    <p>Nenhuma tarefa encontrada</p>
-                }
-            </div>
             <div className={'tarefas'}>
-                {
+                {tarefasFiltradas.length > 0 ? (
+
                     tarefasFiltradas.map((task) => (
 
-                        <TaskItem key={task.id} task={task} iniciarEdicao={iniciarEdicao} handleExcluir={handleExcluir} setExcluirId={setExcluirId} setTitulo={setTitulo} titulo={titulo} salvarEdicao={salvarEdicao} setEditingId={setEditingId} alterarStatus={alterarStatus} iniciarExclusao={iniciarExclusao} excluirId={excluirId} editingId={editingId} />
+                        <TaskItem loading={loading} key={task.id} task={task} iniciarEdicao={iniciarEdicao} handleExcluir={handleExcluir} setExcluirId={setExcluirId} setTitulo={setTitulo} titulo={titulo} salvarEdicao={salvarEdicao} setEditingId={setEditingId} alterarStatus={alterarStatus} iniciarExclusao={iniciarExclusao} excluirId={excluirId} editingId={editingId} />
 
                     ))
-                }
+
+
+                ) : (
+                    <div className="estadoVazio">
+                        <h3>{mensagem}</h3>
+                    </div>
+                )}
+
             </div>
         </div>
 
     );
 }
-
-
-
 
 export default TaskList;

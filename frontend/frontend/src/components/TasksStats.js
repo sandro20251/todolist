@@ -6,7 +6,6 @@ const TasksStats = ({tasks}) => {
     const tarefasCompletas = tasks.filter((task) => task.completed).length;
     const tarefasIncompletas = tasks.filter((task) => !task.completed).length;
 
-
     return (
         
             <div className={'estatisticasContainer'}>

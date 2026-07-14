@@ -2,41 +2,41 @@
     background-color: aliceblue;
     color: #2563EB;
     width: 180px;
-    margin: 0 auto;
     border-radius: 10px;
     border: 1px solid #2563EB;
     padding: 10px;
-    margin-bottom: 5px;
+    margin: 0 auto;
+
 }
 
 .tarefaCompleta {
-    background: rgb(245, 245, 214);;
+    background: rgb(245, 245, 214);
     color: blue;
     width: 180px;
-    margin: 0 auto;
     border-radius: 10px;
     border: 1px solid #2563EB;
     text-decoration: line-through;
     border: 1px solid #2563EB;
     padding: 10px;
-    margin-bottom: 5px;
+    margin: 0 auto;
+
 
 }
 
 
-.descricaoTarefa{
+.descricaoTarefa {
     display: flex;
     justify-content: center;
     gap: 10px;
     padding: 10px;
 }
 
-.editarTarefa{
+.editarTarefa {
     display: flex;
     flex-direction: column;
 }
 
-.editarTarefa input{
+.editarTarefa input {
     border: 1px solid #2563EB;
     padding: 10px;
     border-radius: 10px;
@@ -44,24 +44,54 @@
     margin-bottom: 10px;
 }
 
-.tarefa{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding: 10px;
+.tarefa {
+    gap: 5px;
 }
 
-@media(max-width:425px){
+.botao2 {
+    width: 75px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #2563EB;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s;
+
+}
+
+.botao2:hover {
+    background-color: white;
+    color: #2563EB;
+}
+
+.tarefas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+}
+
+.tarefa {
+    width: 180px;
+    margin: 0 auto;
+}
+
+
+@media(max-width:425px) {
+
     .tarefaCompleta,
-    .tarefaIncompleta{
+    .tarefaIncompleta {
         width: 200px;
-       
+
     }
 
-    .tarefas{
+    .tarefas {
         display: flex;
         justify-content: center;
     }
 }
 
-
+@media(max-width:320px) {}

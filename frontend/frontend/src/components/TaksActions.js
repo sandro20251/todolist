@@ -1,16 +1,28 @@
 import './TaskActions.css'
 
-const TaskActions = ({ handleLimparConcluidas, tasks, handleMarcarTodas }) => {
+const TaskActions = ({ handleLimparConcluidas, tasks, handleMarcarTodas, loading }) => {
     return (
         <div className={'actionsContainer'}>
-            <label>
-                <input type="checkbox"
+            {
+                loading ? (
+                    <label>
+                        <input type="checkbox"
 
-                    onChange={() => handleMarcarTodas(tasks)} />
-                Marcar todas tarefas
-            </label>
+                            onChange={() => handleMarcarTodas(tasks)} />
+                        Aguarde...
+                    </label>
+                ) : (<label>
+                    <input type="checkbox"
 
-            <button onClick={() => handleLimparConcluidas(tasks)} className={'botao3'}>Limpar concuidas</button>
+                        onChange={() => handleMarcarTodas(tasks)} />
+                    Marcar todas tarefas
+                </label>)
+            }
+
+            {
+                loading ? (<button onClick={() => handleLimparConcluidas(tasks)} className={'botao3'} disabled>Aguarde...</button>) : (<button onClick={() => handleLimparConcluidas(tasks)} className={'botao3'}>Limpar concuidas</button>)
+            }
+
         </div>
     )
 }
