@@ -103,14 +103,17 @@
 
 // module.exports = new TaskController();
 
+const Task = require('../models/Task');
+
 class TaskController {
 
     async getAll(req, res) {
         return res.status(200).json({
-            teste: "controller funcionando"
+            teste: "model carregou"
         });
     }
 
 }
 
 module.exports = new TaskController();
+
