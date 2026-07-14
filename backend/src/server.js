@@ -41,11 +41,11 @@
 
 const express = require('express');
 const cors = require('cors');
+const db = require('./database/index');
 
 const app = express();
 
 app.use(express.json());
-
 app.use(cors());
 
 app.get('/', (req, res) => {
@@ -53,5 +53,13 @@ app.get('/', (req, res) => {
         status: "API funcionando"
     });
 });
+
+db.authenticate()
+    .then(() => {
+        console.log("Banco conectado");
+    })
+    .catch((err) => {
+        console.log("Erro banco:", err.message);
+    });
 
 module.exports = app;
