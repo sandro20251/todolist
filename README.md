@@ -32,25 +32,25 @@ Banco de dados:
 ![Home](./images/Home.png)
 
 ### Criar tarefa
-![Criar tarefa](./images/Criar-tarefa.png)
+![Criar tarefa](./README/images/Criar-tarefa.png)
 
 ### Editando tarefa
-![Editar tarefa](./images/Editando-tarefa.png)
+![Editar tarefa](./README/images/Editando-tarefa.png)
 
 ### Excluir tarefa
-![Excluir tarefa](./images/Excluir-tarefa.png)
+![Excluir tarefa](./README/images/Excluir-tarefa.png)
 
 ### Filtrar tarefa
-![Filtrar tarefa](./images/Filtrar-tarefa.png)
+![Filtrar tarefa](./README/images/Filtrar-tarefa.png)
 
 ### Pesquisar tarefa
-![Pesquisa tarefa](./images/Pesquisar-tarefa.png)
+![Pesquisa tarefa](./README/images/Pesquisar-tarefa.png)
 
 ### Estado vazio
-![Estado vazio](./images/Estado-vazio.png)
+![Estado vazio](./README/images/Estado-vazio.png)
 
 ### Responsividade
-![Responsividade](./images/Responsividade2.png)
+![Responsividade](./README/images/Responsividade2.png)
 
 📂 Estrutura do projeto
 
