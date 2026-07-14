@@ -41,34 +41,20 @@
 
 const express = require('express');
 const cors = require('cors');
-const db = require('./database/index');
 
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
-app.use(cors({
-    origin: [
-        'http://localhost:3000',
-        'https://todolist-two-gold-54.vercel.app'
-    ],
-    credentials: true
-}));
+const taskRoutes = require('./routes/taskRoutes');
 
-app.get('/', (req, res) => {
+app.use('/', taskRoutes);
+
+app.get('/', (req,res)=>{
     res.json({
-        status: "API funcionando"
+        status:"API funcionando"
     });
 });
-
-app.use('/', require('./routes/taskRoutes'));
-
-db.authenticate()
-    .then(() => {
-        console.log("Banco conectado");
-    })
-    .catch((err) => {
-        console.log("Erro banco:", err.message);
-    });
 
 module.exports = app;
