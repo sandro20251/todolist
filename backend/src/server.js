@@ -51,9 +51,9 @@ const taskRoutes = require('./routes/taskRoutes');
 
 app.use('/', taskRoutes);
 
-app.get('/', (req,res)=>{
+app.get('/', (req, res) => {
     res.json({
-        status:"API funcionando"
+        status: "API funcionando"
     });
 });
 

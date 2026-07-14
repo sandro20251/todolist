@@ -15,7 +15,7 @@ const router = express.Router();
 
 router.get('/tasks', (req, res) => {
     res.json({
-        teste: "rota funcionando"
+        mensagem: "rota tasks funcionando"
     });
 });
 
