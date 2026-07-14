@@ -29,7 +29,7 @@ Banco de dados:
 
 📸 Capturas de tela
 ### Home
-![Home](./images/Home.png)
+![Home](./README/images/Home.png)
 
 ### Criar tarefa
 ![Criar tarefa](./README/images/Criar-tarefa.png)
@@ -64,7 +64,7 @@ todo-list
       - routes
       - server.js
 - frontend
-   - SRC
+   - src
      - components
      - hooks
      - pages
@@ -85,9 +85,9 @@ Execução:
 
 - Mudança visual em botões ao clicar
 - Criação de checkbox
-- filtros
-- ordenação
-- organização de frontend
+- Implementação de filtros de tarefas
+- Ordenação de dados
+- Organização e estruturação do frontend
 
 👨‍💻 Autor
 
