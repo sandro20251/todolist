@@ -75,21 +75,21 @@ todo-list/
 🚀 Como executar
 
 Requisitos:
--vs code ou semelhante  com Node.js instalado,
--MYSQL com XAMPP por exemplo ou outra configuração,
+- vs code ou semelhante  com Node.js instalado,
+- MYSQL com XAMPP por exemplo ou outra configuração,
 
 Execução:
--Na pasta base passe o comando npm install para instalar as bibliotecas do package-json
--abra um terminal integrado para backend e dentro dele execute npm start
--abra um terminal integrado para frontend e dentro dele execute npm start
+- Na pasta base passe o comando npm install para instalar as bibliotecas do package-json
+- abra um terminal integrado para backend e dentro dele execute npm start
+- abra um terminal integrado para frontend e dentro dele execute npm start
 
 📚 Aprendizados
 
--Mudança visual em botões ao clicar
--Criação de checkbox
--filtros
--ordenação
--organização de frontend
+- Mudança visual em botões ao clicar
+- Criação de checkbox
+- filtros
+- ordenação
+- organização de frontend
 
 👨‍💻 Autor
 
