@@ -42,9 +42,6 @@ frontend: React.js
 
 ### Responsividade
 ![Tela de Login](./README/images/Responsividade2.png)
-![Tela de Login](./README/images/responsividade celular.png)
-
-
 
 📂 Estrutura do projeto
 
