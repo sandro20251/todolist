@@ -245,6 +245,7 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
                 ) : (
                     <div className="estadoVazio">
                         <h3>{mensagem}</h3>
+                        <br></br>
                     </div>
                 )}
 
