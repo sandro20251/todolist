@@ -206,7 +206,7 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
     }
     let mensagem = "";
     if (tasks.length === 0) {
-        mensagem = "Você ainda não possui nenhuma tarefa.";
+        mensagem = "Sem tarefas.";
     } else if (pesquisa !== "") {
         mensagem = "Nenhuma tarefa encontrada para essa pesquisa.";
     } else if (filtro === "completas") {
@@ -245,7 +245,7 @@ const TaskList = ({ tasks, deleteExistingTask, updateExistingTask, messages, set
                 ) : (
                     <div className="estadoVazio">
                         <h3>{mensagem}</h3>
-                        <br></br>
+                        
                     </div>
                 )}
 
