@@ -112,7 +112,8 @@
         flex-direction: column;
     }
 
-    .estadoVazio{
+    .estadoVazio {
         padding: 10px;
+        height: 200px;
     }
 }

@@ -16,7 +16,7 @@
     padding: 10px;
 }
 
-@media(max-width: 375px) {
+@media(max-width: 425px) {
     .tipoEstatistica {
         display: flex;
         flex-direction: column;
