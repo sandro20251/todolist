@@ -27,13 +27,13 @@ db.authenticate()
     .catch((err) => {
         console.log("Erro banco:", err.message);
     });
+
+// Pega a porta do Railway (que será a 8080) ou usa a 3000 localmente
 const PORT = process.env.PORT || 3000;
 
-if (process.env.PORT || require.main === module) {
-    app.listen(PORT, '0.0.0.0', () => {
-        console.log(`Servidor rodando com sucesso na porta ${PORT}`);
-    });
-}
+app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Servidor rodando com sucesso na porta ${PORT}`);
+});
 
 // exporta para o Vercel
 module.exports = app;
