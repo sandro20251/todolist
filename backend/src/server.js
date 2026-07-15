@@ -105,5 +105,5 @@ db.authenticate()
         console.log("Erro banco:", err.message);
     });
 
-module.exports = app;
+
 
