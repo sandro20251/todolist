@@ -25,7 +25,7 @@ db.authenticate()
         console.log("Banco conectado");
     })
     .catch((err) => {
-        console.log("Erro banco:", err.message);
+        console.error("Erro banco completo:", err); // <-- Mude para console.error e passe o objeto err inteiro
     });
 
 // Pega a porta do Railway (que será a 8080) ou usa a 3000 localmente
