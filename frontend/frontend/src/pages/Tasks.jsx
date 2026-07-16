@@ -10,7 +10,7 @@ const Tasks = () => {
     const { tasks, createNewTask, deleteExistingTask, updateExistingTask } = useTasks();
 
     return (
-        <div className={'tarefas'}>
+        <div className={'tarefas2'}>
             <h1 className={'tarefaTitulo'}>Tarefas:</h1>
             <div className={messages ? 'mensagens' : ''}>
                 {
