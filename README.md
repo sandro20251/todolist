@@ -1,31 +1,43 @@
 # Todo List Full Stack
 
+Aplicação Full Stack para gerenciamento de tarefas, desenvolvida com React, Node.js, Express e MySQL. O sistema permite criar, editar, excluir, pesquisar, filtrar e organizar tarefas, demonstrando conhecimentos em desenvolvimento Full Stack e consumo de APIs REST.
+
 Descrição
 
 Sistema de criação e gerenciamento de tarefas desenvolvido como projeto de portfólio para demonstrar conhecimentos em desenvolvimento Full Stack.
 
-✨ Funcionalidades
+## ✨ Funcionalidades
 
-- CRUD completo de tarefas
-- Criação, edição e exclusão de tarefas
-- Estatísticas de tarefas completas, incompletas e total
-- Pesquisa de tarefas cadastradas
-- Filtros por status (todas, completas e incompletas)
-- Ordenação por título e nome
-- Interface responsiva
+- ✅ Criar tarefas
+- ✅ Editar tarefas
+- ✅ Excluir tarefas
+- ✅ Marcar tarefa como concluída
+- ✅ Pesquisar tarefas
+- ✅ Filtrar tarefas
+- ✅ Ordenar tarefas
+- ✅ Estatísticas em tempo real
+- ✅ Interface responsiva
 
-🛠 Tecnologias
+## 🛠 Tecnologias
 
-Frontend:
-- React.js
+### Frontend
+- React
+- CSS3
+- Fetch API
 
-Backend:
+### Backend
 - Node.js
 - Express
-- Sequelize ORM
+- Sequelize
 
-Banco de dados:
+### Banco de Dados
 - MySQL
+
+### Ferramentas
+- Git
+- GitHub
+- Vercel
+- Railway
 
 📸 Capturas de tela
 ### Home
@@ -54,40 +66,61 @@ Banco de dados:
 
 📂 Estrutura do projeto
 
-todo-list
-- backend
-   - src
-      - controllers
-      - database
-      - middlewares
-      - models
-      - routes
-      - server.js
-- frontend
-   - src
-     - components
-     - hooks
-     - pages
-     - services
+todo-list/
+
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── database/
+│   │   ├── middlewares/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── server.js
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   └── services/
+│
+└── README.md
           
 🚀 Como executar
 
-Requisitos:
-- vs code ou semelhante  com Node.js instalado,
-- MYSQL com XAMPP por exemplo ou outra configuração,
+# Backend
 
-Execução:
-- Na pasta base passe o comando npm install para instalar as bibliotecas do package-json
-- abra um terminal integrado para backend e dentro dele execute npm start
-- abra um terminal integrado para frontend e dentro dele execute npm start
+cd backend
+
+npm install
+
+npm start
+
+# Frontend
+
+cd frontend
+
+npm install
+
+npm start
+
+## 🌐 Deploy
+
+Frontend:
+https://todolist-two-gold-54.vercel.app/
+
+Backend:
+https://todolist-production-7ef0.up.railway.app
 
 📚 Aprendizados
 
-- Mudança visual em botões ao clicar
-- Criação de checkbox
-- Implementação de filtros de tarefas
-- Ordenação de dados
-- Organização e estruturação do frontend
+Organização de uma aplicação Full Stack.
+Desenvolvimento de APIs REST com Express.
+Integração entre frontend e backend utilizando Fetch API.
+Persistência de dados com MySQL e Sequelize.
+Deploy de aplicações utilizando Vercel e Railway.
+Estruturação de projetos React.
+Gerenciamento de estado com Hooks.
 
 👨‍💻 Autor
 
